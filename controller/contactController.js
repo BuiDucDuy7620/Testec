@@ -1,6 +1,6 @@
 const contactModel = require('../model/contactModel.js')
 const { contactValidate } = require('../middleware/validate.js')
-const excelJS=require('excelJS')
+const excelJS=require('exceljs')
 const ejs = require('ejs')
 const pdf = require('html-pdf')
 const fs = require('fs')
