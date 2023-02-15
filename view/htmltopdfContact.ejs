@@ -1,0 +1,29 @@
+<table width="50%">
+
+    <tr>
+        <th>Name </th>
+        <th>Email </th>
+        <th>Phone </th>
+        <th>Message </th>
+    </tr>
+
+    <tbody>
+        <% contactModel.forEach(function(data) { %>
+            <tr>
+                <td>
+                    <%= data.name %>
+                </td>
+                <td>
+                    <%= data.email %>
+                </td>
+                <td>
+                    <%= data.phone %>
+                </td>
+                <td>
+                    <%= data.message %>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+
+</table>
