@@ -23,5 +23,16 @@ const applyValidate = (data) => {
     });
     return schema.validate(data);
 };
-module.exports = { contactValidate, applyValidate }
+const blogValidate = (data) => {
+    const schema = Joi.object({
+        idName: Joi.string().min(1).required(),
+        title: Joi.string().min(1).required(),
+        description: Joi.string().min(1).required(),
+        image: Joi.string().min(1).required(),
+        content: Joi.string().min(1).required(),
+       
+    });
+    return schema.validate(data);
+};
+module.exports = { contactValidate, applyValidate,blogValidate }
 
