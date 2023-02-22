@@ -16,7 +16,7 @@ class blogController {
         })
     }
     getAllBlog = (req, res) => {
-        blogModel.find({}, { idName: 0, content: 0 ,description:0}).exec((err, blog) => {
+        blogModel.find({}, { link:0,challenges:0,solution:0}).exec((err, blog) => {
             if (err) {
                 res.send(err)
             } else {
