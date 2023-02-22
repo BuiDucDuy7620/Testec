@@ -24,12 +24,13 @@ const applyValidate = (data) => {
     return schema.validate(data);
 };
 const blogValidate = (data) => {
-    const schema = Joi.object({
-        idName: Joi.string().min(1).required(),
-        title: Joi.string().min(1).required(),
-        description: Joi.string().min(1).required(),
-        image: Joi.string().min(1).required(),
-        content: Joi.string().min(1).required(),
+    const schema = Joi.object({    
+            type: Joi.string().min(1).required(),
+
+        link: Joi.string().min(1).required(),
+        img: Joi.string().min(1).required(),
+        challenges: Joi.string().min(1).required(),
+        solution: Joi.string().min(1).required(),
        
     });
     return schema.validate(data);

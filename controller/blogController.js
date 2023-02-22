@@ -24,8 +24,8 @@ class blogController {
             }
         })
     }
-    getBlogByIdName = (req, res) => {
-        blogModel.find({ idName: req.params.idName }).exec((error, blog) => {
+    getBlogById = (req, res) => {
+        blogModel.find({ _id: req.params.id }).exec((error, blog) => {
             if (error) {
                 res.send('khong the lay thong tin blog')
             } else {
@@ -33,5 +33,6 @@ class blogController {
             }
         })
     }
+    
 }
 module.exports = new blogController()

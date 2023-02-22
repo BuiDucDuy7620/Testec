@@ -27,15 +27,12 @@ class applyController {
                         if (err) throw err
                     }
                 )
-
             }
             value.resume = document.url 
         }
         // var x = path.join(`./public/document/${new Date().toLocaleDateString}`)
-
         //     console.log('joinnnnnnnnnnnnnnnnnnnnnnnnnn', x)
         //     console.log('dirnamennnnnnnnnnnnnnnnnnnnnnnnnn', __dirname)
-
         let apply = new applyModel(value)
         apply.save((error, apply) => {
             if (error) {
